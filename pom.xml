@@ -5,7 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.fauxle.souppvp</groupId>
-    <artifactId>SoupPVP</artifactId>
+    <artifactId>soup-pvp</artifactId>
+    <name>SoupPVP</name>
     <description>Adds soup pvp support to the server</description>
     <version>1.0</version>
 
