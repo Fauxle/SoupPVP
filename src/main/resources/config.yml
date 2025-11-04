@@ -1,0 +1,7 @@
+# ${project.name} configuration
+
+# How much each soup restores in health
+soup-health-restores: 7
+
+# How much each soup restores in food
+soup-food-level-restores: 7
