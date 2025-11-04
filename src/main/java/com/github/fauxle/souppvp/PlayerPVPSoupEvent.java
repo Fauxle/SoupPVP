@@ -11,9 +11,8 @@ import org.bukkit.event.player.PlayerEvent;
 @Setter
 public class PlayerPVPSoupEvent extends PlayerEvent implements Cancellable {
 
-    @Getter private static final HandlerList handlers = new HandlerList();
+    private static final HandlerList handlers = new HandlerList();
     private boolean cancelled;
-
     private double newHealth;
     private int newFoodLevel;
 
@@ -21,5 +20,10 @@ public class PlayerPVPSoupEvent extends PlayerEvent implements Cancellable {
         super(who);
         this.newHealth = newHealth;
         this.newFoodLevel = newFoodLevel;
+    }
+
+    @Override
+    public HandlerList getHandlers() {
+        return handlers;
     }
 }
