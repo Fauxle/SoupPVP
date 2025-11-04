@@ -1,7 +1,13 @@
 # ${project.name} configuration
 
 # How much each soup restores in health
-soup-health-restores: 7
+soup-health-restores: 8
 
 # How much each soup restores in food
-soup-food-level-restores: 7
+soup-food-level-restores: 8
+
+# Support crafting mushroom stew with one bowl and two cacti
+add-cactus-soup-recipe: true
+
+# Support crafting mushroom stew with one bowl and one cocoa bean
+add-chocolate-milk-recipe: true

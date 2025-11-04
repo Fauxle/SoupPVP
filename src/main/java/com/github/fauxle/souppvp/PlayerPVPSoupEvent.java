@@ -13,7 +13,11 @@ public class PlayerPVPSoupEvent extends PlayerEvent implements Cancellable {
 
     private static final HandlerList handlers = new HandlerList();
     private boolean cancelled;
+
+    /** The new health the player will be at after consuming the soup */
     private double newHealth;
+
+    /** The new food level the player will be at after consuming the soup */
     private int newFoodLevel;
 
     public PlayerPVPSoupEvent(Player who, double newHealth, int newFoodLevel) {

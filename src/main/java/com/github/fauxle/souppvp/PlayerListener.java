@@ -15,7 +15,7 @@ public class PlayerListener implements Listener {
 
     private final SoupPVP plugin;
 
-    @EventHandler(ignoreCancelled = true)
+    @EventHandler
     public void onInteract(PlayerInteractEvent event) {
         if (event.getItem() == null) return;
         if (event.getItem().getType() != Material.MUSHROOM_SOUP) return;
@@ -33,6 +33,9 @@ public class PlayerListener implements Listener {
             newHealth = Math.min(p.getMaxHealth(), newHealth + plugin.soupHealthRestores);
         } else if (p.getFoodLevel() < 20) {
             newFoodLevel = Math.min(20, (int) (newFoodLevel + plugin.soupFoodRestores));
+        } else {
+            event.setCancelled(true);
+            return;
         }
 
         PlayerPVPSoupEvent soupEvent = new PlayerPVPSoupEvent(p, newHealth, newFoodLevel);
